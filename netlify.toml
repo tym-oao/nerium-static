@@ -1,6 +1,3 @@
-[Settings]
-  ID = "2408f3e3-5759-4481-9d2c-a08dc8401cee"
-
 [Build]
-  Publish = ""
+  Publish = "dist/"
   Functions = ""

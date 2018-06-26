@@ -25,7 +25,7 @@ export default {
       fetch('./alpha-eu.json')
       .then(response => response.json())
       // Separate month_rev to series by EU/Non-EU
-      .then(data => this.data = groupBy(data.data, month => month.european_union))
+      .then(data => this.data = groupBy(data, month => month.european_union))
       .then(series => this.series = [
         series.EU.map(rev => rev.monthly_rev), 
         series['Non-EU'].map(rev => rev.monthly_rev)
