@@ -1,0 +1,20 @@
+$background: #f8f9fa;
+@import 'chartist/dist/scss/chartist.scss';
+.ct-chart {
+    background-color: #e9ecef;
+    border: 1px solid #868e96;
+    margin: auto;
+    // TODO: media query for wider chart on mobile
+    width: 67%;
+}
+.ct-series-b .ct-bar {
+    stroke: #74c0fc;
+    stroke-width: 2rem;
+}
+
+.ct-series-a .ct-bar {
+    stroke: #364fc7;
+    stroke-width: 2rem;
+}
+
+@import '~bulma/bulma';
