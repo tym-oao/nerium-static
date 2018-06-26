@@ -1,6 +1,9 @@
-<template> 
-  <div class="ct-chart ct-golden-section">
-    {{ message }}
+<template>
+  <div>
+    <h1 class="title">{{ title }}</h1>
+    <div class="ct-chart ct-golden-section">
+      {{ message }}
+    </div>
   </div>
 </template>
 
@@ -13,6 +16,7 @@ export default {
   name: 'EUChart',
   data() {
     return {
+      title: 'Alpha Monthly Revenue, EU vs. Non-EU',
       message: 'Loading...',
       series: [],
       labels: [],
@@ -53,7 +57,7 @@ export default {
           },
           horizontalBars: true,
           reverseData: true,
-          stackBars: true, 
+          stackBars: true,
         } 
         new Chartist.Bar('.ct-chart', data, options)
         })
