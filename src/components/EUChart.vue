@@ -1,5 +1,5 @@
 <template> 
-  <div class="ct-chart">
+  <div class="ct-chart ct-golden-section">
     {{ message }}
   </div>
 </template>
@@ -51,11 +51,9 @@ export default {
               return moment(value).format('MMM YYYY') 
             }
           },
-          height: '500px',
           horizontalBars: true,
           reverseData: true,
           stackBars: true, 
-          width: '67%'
         } 
         new Chartist.Bar('.ct-chart', data, options)
         })

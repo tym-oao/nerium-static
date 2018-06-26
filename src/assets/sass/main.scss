@@ -3,9 +3,7 @@ $background: #f8f9fa;
 .ct-chart {
     background-color: #e9ecef;
     border: 1px solid #868e96;
-    margin: auto;
-    // TODO: media query for wider chart on mobile
-    width: 67%;
+    margin: 2rem auto;
 }
 .ct-series-b .ct-bar {
     stroke: #74c0fc;
