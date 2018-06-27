@@ -1,3 +1,5 @@
+[Settings]
+  ID = "<your_site_ID>"
 
 [Build]
   Publish = "dist/"
