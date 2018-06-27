@@ -1,3 +1,9 @@
+
 [Build]
   Publish = "dist/"
   Functions = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -39,7 +39,6 @@ export default {
       .then(() => this.labels = this.data.EU.map(month => month.month))
       // Provision Chartist stacked bar chart
       .then(() => {
-        console.log([this.labels, this.series])
         var data = { 
           labels: this.labels, 
           series: this.series 
