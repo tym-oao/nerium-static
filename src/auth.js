@@ -6,6 +6,7 @@ let webAuth = new auth0.WebAuth({
   domain: 'tym-oao.auth0.com',
   clientID: '3WW4lg3F0kOBxxRABPvhcW3eGJMKrMIu',
   // TODO: get redirectUri from environment variable
+  // redirectUri: 'http://localhost:8080/callback',
   redirectUri: 'https://nerium-static.ty-m.pw/callback',
   // we will use the api/v2/ to access the user information as payload
   audience: 'https://tym-oao.auth0.com/api/v2/',
