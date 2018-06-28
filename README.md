@@ -2,7 +2,7 @@
 
 Prototype static report generator based on Python [Nerium](https://github.com/oaodev/nerium) library, [Vue.js](https://vuejs.org), and [Chartist.js](https://gionkunz.github.io/chartist-js/).
 
-Live example running at <http://pedantic-hugle-486026.netlify.com/>
+Live example running at <https://nerium-static.ty-m.pw/>
 
 The included `nerium_static.py` script uses the Nerium library without the web app, and can work for any arbitrary database query you can configure access to.
 
