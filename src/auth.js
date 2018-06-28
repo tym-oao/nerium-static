@@ -1,20 +1,21 @@
 import auth0 from 'auth0-js'
 import Vue from 'vue'
 
-// exchange the object with your own from the setup step above.
-let webAuth = new auth0.WebAuth({
+const url = new URL(window.location.href)
+
+// TODO: Separate config file for this.
+const webAuth = new auth0.WebAuth({
   domain: 'tym-oao.auth0.com',
   clientID: '3WW4lg3F0kOBxxRABPvhcW3eGJMKrMIu',
-  // TODO: get redirectUri from environment variable
-  // redirectUri: 'http://localhost:8080/callback',
-  redirectUri: 'https://nerium-static.ty-m.pw/callback',
+  redirectUri: url.protocol + '//' + url.host + '/callback',
+  // redirectUri: 'https://nerium-static.ty-m.pw/callback',
   // we will use the api/v2/ to access the user information as payload
   audience: 'https://tym-oao.auth0.com/api/v2/',
   responseType: 'token id_token',
-  scope: 'openid profile'
+  scope: 'openid profile email'
 })
 
-let auth = new Vue({
+const auth = new Vue({
   computed: {
     token: {
       get: function() {
@@ -60,7 +61,7 @@ let auth = new Vue({
         localStorage.removeItem('id_token')
         localStorage.removeItem('expires_at')
         localStorage.removeItem('user')
-        webAuth.authorize()
+        this.login()
       })
     },
     isAuthenticated() {
@@ -69,8 +70,8 @@ let auth = new Vue({
     handleAuthentication() {
       return new Promise((resolve, reject) => {  
         webAuth.parseHash((err, authResult) => {
-
-          if (authResult && authResult.accessToken && authResult.idToken) {
+          const valid = authResult && authResult.accessToken && authResult.idToken
+          if (valid) {
             this.expiresAt = authResult.expiresIn
             this.accessToken = authResult.accessToken
             this.token = authResult.idToken

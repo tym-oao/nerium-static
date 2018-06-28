@@ -17,7 +17,7 @@ export default {
 .callback {
   width: 40px;
   height: 40px;
-  background-color: #333;
+  background-color: #ae3ec9;
 
   margin: 100px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
