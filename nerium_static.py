@@ -7,28 +7,15 @@ from nerium import Query, ResultFormat
 
 
 def serialize(obj):
-    """Convert dates/times to isoformat, decimals to strings, for use by JSON formatter"""
+    """Convert dates/times to isoformat, decimals to strings,
+    for use by JSON formatter
+    """
     if hasattr(obj, 'isoformat'):
         return obj.isoformat()
     elif isinstance(obj, decimal.Decimal):
         return str(obj)
     else:
         return str(obj)
-
-
-def multi_to_dict(obj):
-    """Convert multidict to dict, consolidating values
-       into list for repeated keys
-    """
-    if hasattr(obj, 'getall'):
-        new_dict = {
-            key: (obj.getall(key)
-                  if len(obj.getall(key)) > 1 else obj.get(key))
-            for key in obj.keys()
-        }
-        return new_dict
-    else:
-        return dict(obj)
 
 
 def generate_resultset(query_name, format_='default', query_params={}):

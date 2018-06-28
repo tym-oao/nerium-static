@@ -8,8 +8,6 @@ const webAuth = new auth0.WebAuth({
   domain: 'tym-oao.auth0.com',
   clientID: '3WW4lg3F0kOBxxRABPvhcW3eGJMKrMIu',
   redirectUri: url.protocol + '//' + url.host + '/callback',
-  // redirectUri: 'https://nerium-static.ty-m.pw/callback',
-  // we will use the api/v2/ to access the user information as payload
   audience: 'https://tym-oao.auth0.com/api/v2/',
   responseType: 'token id_token',
   scope: 'openid profile email'
