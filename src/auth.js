@@ -5,7 +5,7 @@ import Vue from 'vue'
 let webAuth = new auth0.WebAuth({
   domain: 'tym-oao.auth0.com',
   clientID: '3WW4lg3F0kOBxxRABPvhcW3eGJMKrMIu',
-  redirectUri: 'http://pedantic-hugle-486026.netlify.com/callback',
+  redirectUri: 'https://pedantic-hugle-486026.netlify.com/callback',
   // we will use the api/v2/ to access the user information as payload
   audience: 'https://tym-oao.auth0.com/api/v2/',
   responseType: 'token id_token',
