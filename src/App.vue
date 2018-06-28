@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <EUChart />
+    <router-view />
   </div>
 </template>
 
 <script>
-import EUChart from './components/EUChart.vue'
-
 export default {
-  name: 'app',
-  components: {
-    EUChart
-  }
+  name: 'App'
 }
 </script>
