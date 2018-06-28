@@ -1,18 +1,18 @@
 $background: #f8f9fa;
-@import 'chartist/dist/scss/chartist.scss';
+
+$ct-bar-width: 1.382rem !default;
+$ct-series-colors: (#364fc7, #74c0fc, #f4c63d, #d17905, #453d3f, #59922b, #0544d3, #6b0392, #f05b4f, #dda458, #eacf7d, #86797d, #b2c326, #6188e2, #a748ca) !default;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+}
+
 .ct-chart {
-    background-color: #e9ecef;
-    border: 1px solid #868e96;
+    @include border-radius(9px);
+    background-color: #f1f3f5;
+    border: 1px solid #dee2e6;
 }
-
-.ct-series-b .ct-bar {
-    stroke: #74c0fc;
-    stroke-width: 2rem;
-}
-
-.ct-series-a .ct-bar {
-    stroke: #364fc7;
-    stroke-width: 2rem;
-}
-
+@import 'chartist/dist/scss/chartist.scss';
 @import '~bulma/bulma';

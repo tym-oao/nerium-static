@@ -1,10 +1,21 @@
 <template>
-  <div>
-    <h1 class="title">{{ title }}</h1>
-    <div class="ct-chart ct-golden-section">
-      {{ message }}
-    </div>
-  </div>
+  <main class="main">
+    <section class="section">
+        <div class="columns is-centered">
+          <div class="column">
+            <h1 class="title">{{ title }}</h1>
+            <div class="ct-chart ct-golden-section">
+              {{ message }}
+            </div>
+            <div class="section">
+              <p class="has-text-right">
+                <button type="button" class="button is-normal is-link" @click="$auth.logout()">Logout</button>
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -13,7 +24,6 @@ import groupBy from 'lodash.groupby'
 import moment from 'moment'
 
 export default {
-  name: 'EUChart',
   data() {
     return {
       title: 'Alpha Monthly Revenue, EU vs. Non-EU',
@@ -39,7 +49,6 @@ export default {
       .then(() => this.labels = this.data.EU.map(month => month.month))
       // Provision Chartist stacked bar chart
       .then(() => {
-        console.log([this.labels, this.series])
         var data = { 
           labels: this.labels, 
           series: this.series 
