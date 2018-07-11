@@ -1,6 +1,6 @@
 # nerium-static
 
-Prototype static report generator based on Python [Nerium](https://github.com/oaodev/nerium) library, [Vue.js](https://vuejs.org), and [Chartist.js](https://gionkunz.github.io/chartist-js/).
+Prototype static report generator based on PostgreSQL, [Vue.js](https://vuejs.org), and [Chartist.js](https://gionkunz.github.io/chartist-js/).
 
 Live example running at <https://nerium-static.ty-m.pw/>
 
