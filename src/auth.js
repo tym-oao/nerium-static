@@ -10,7 +10,7 @@ const webAuth = new auth0.WebAuth({
   redirectUri: url.protocol + '//' + url.host + '/callback',
   audience: 'https://tym-oao.auth0.com/api/v2/',
   responseType: 'token id_token',
-  scope: 'openid profile email'
+  scope: 'openid'
 })
 
 const auth = new Vue({
