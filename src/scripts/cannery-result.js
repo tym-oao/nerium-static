@@ -29,8 +29,7 @@ fs.readFile(
         if (err) throw err
         const output = CANNERY_CONFIG.outputName || CANNERY_CONFIG.queryName
         fs.writeFile(
-          '../../public/' +  + '.json',
-          output,
+          '../../public/' + output +'.json',
           JSON.stringify(rows),
           () => {
             console.log('done!')
