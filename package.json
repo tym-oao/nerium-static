@@ -6,6 +6,8 @@
     "serve": "vue-cli-service serve",
     "prebuild": "node ./src/scripts/cannery-result.js",
     "build": "vue-cli-service build",
+    "predeploy": "npm run lint && npm run build",
+    "deploy": "netlifyctl deploy",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
