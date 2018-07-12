@@ -15,20 +15,28 @@ git clone git@github.com:tym-oao/nerium-static.git
 npm install
 ```
 
-## Usage
+## Quick Start
+
+```bash
+npm run dev
+```
+
+This will configure your environment with a basic .env file, build the data and app, then serve the app using the stubs at `./src/scripts/queries`.
+
+## Develop
 
 - Add query script to `/src/scripts/queries` directory
 - Edit `/src/scripts/cannery-config.yaml` with options:
   - queryName(required)
   - queryParams(dictionary, optional, as needed for query script)
   - outputName(optional, defaults to query_name)
-- `cd /src/scripts; node cannery-result.js` writes JSON output to `public`
+- `npm run build` fires `npm run prebuild`, which writes JSON output to `public`
 
-## Deployment to Netlify
+## Deploy
 
-Assumes `netlifyctl` is installed locally
+Scripts currently assume `netlifyctl` is installed locally:
 
 ``` sh
 npm run build
-netlifyctl deploy
+npm run deploy
 ```
