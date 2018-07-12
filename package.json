@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "if [ ! -f ./.env ] && [ -z \"${DATABASE_URL}\" ]; then cp ./src/scripts/.env.example ./.env; fi",
+    "dev": "npm run build && npm run serve",
     "serve": "vue-cli-service serve",
     "prebuild": "node ./src/scripts/cannery-result.js",
     "build": "vue-cli-service build",
