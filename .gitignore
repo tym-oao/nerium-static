@@ -3,8 +3,7 @@ node_modules
 netlify.toml
 /dist
 *.sql
-!/src/scripts/queries/test.sql
-/public/*.json
+!*test.sql
 
 # local env files
 .env.local
