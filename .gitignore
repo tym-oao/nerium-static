@@ -2,7 +2,7 @@
 node_modules
 netlify.toml
 /dist
-/src/scripts/queries/*.sql
+*.sql
 !/src/scripts/queries/test.sql
 /public/*.json
 
