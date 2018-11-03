@@ -8,6 +8,7 @@
               {{ message }}
             </div>
             <div class="section">
+              <p><a href="/table">Table</a></p>
               <p class="has-text-right">
                 <button type="button" class="button is-normal is-link" @click="$auth.logout()">Logout</button>
               </p>

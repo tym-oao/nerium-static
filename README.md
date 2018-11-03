@@ -34,7 +34,7 @@ This will configure your environment with a basic .env file, build the data and 
 
 ## Deploy
 
-Scripts currently assume `netlifyctl` is installed locally:
+Scripts currently assume [Netlify CLI](https://www.netlify.com/docs/cli/) is installed locally:
 
 ``` sh
 npm run build

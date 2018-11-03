@@ -9,7 +9,7 @@
     "prebuild": "node ./src/scripts/cannery-result.js",
     "build": "vue-cli-service build",
     "predeploy": "npm run lint && npm run build",
-    "deploy": "netlifyctl deploy",
+    "deploy": "netlify deploy",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -25,7 +25,8 @@
     "sass-loader": "^7.0.3",
     "sqlite3": "^4.0.1",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuejs-datatable": "^1.7.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^3.0.0-rc.3",

@@ -17,6 +17,11 @@ const router = new Router({
       path: '/callback',
       name: 'callback',
       component: Callback
+    },
+    {
+      path: '/table',
+      name: 'table',
+      component: Table
     }
   ]
 })
