@@ -2,7 +2,7 @@
 
 Prototype static report generator based on PostgreSQL, [Vue.js](https://vuejs.org), and [Chartist.js](https://gionkunz.github.io/chartist-js/).
 
-Live example running at <https://nerium-static.ty-m.pw/>
+~~Live example running at <https://nerium-static.ty-m.pw/>~~
 
 The included `cannery-result.js` script uses [`pg-db`](https://github.com/sehrope/node-pg-db), and can work for any arbitrary query against a Postgres database you have access to. Configure your Postgres connection by setting `DATABASE_URL` in your environment or a local `.env` file.
 
